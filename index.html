@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Saputra Rajoet - Fashion Rajutan Stylish</title>
+  <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.min.css" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #121212;
+      color: #f8f9fa;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, #1b1b1b, #2a2a2a, #1c1c1c);
+      transition: all 0.3s ease;
+      padding: 0.8rem 0;
+    }
+
+    .navbar-brand {
+      margin-left: -20px;
+    }
+
+    .navbar-brand img {
+      border-radius: 50%;
+      margin-right: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand img:hover {
+      transform: scale(1.1);
+    }
+
+    .navbar-nav .nav-link {
+      color: #ddd !important;
+      margin-right: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link:focus {
+      color: #ff0066 !important;
+    }
+
+    /* Dropdown menu styling */
+    .dropdown-menu {
+      background-color: #222;
+      border: none;
+      border-radius: 0;
+    }
+
+    .dropdown-item {
+      color: #ddd;
+      transition: all 0.3s;
+    }
+
+    .dropdown-item:hover {
+      background-color: #333;
+      color: #ff0066;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #141414, #1e1e1e, #2c2c2c);
+      color: white;
+      text-align: center;
+      padding: 120px 0 100px;
+    }
+
+    .hero h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    /* Produk Section */
+    .product-card {
+      transition: all 0.3s ease;
+      border: none;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(255, 0, 102, 0.2);
+    }
+
+    .product-card img {
+      height: 240px;
+      object-fit: cover;
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #f8f9fa;
+    }
+
+    .text-muted {
+      color: #aaa !important;
+    }
+
+    .btn-primary,
+    .btn-outline-primary:hover {
+      background-color: #ff0066 !important;
+      border-color: #ff0066 !important;
+      color: white !important;
+    }
+
+    /* Footer */
+    footer {
+      background: linear-gradient(90deg, #111, #1b1b1b, #111);
+      color: #ccc;
+      padding: 40px 0;
+      font-size: 14px;
+    }
+
+    footer img {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="images/logo.png" alt="Logo" width="45" height="45">
+        <span class="font-weight-bold">Saputra Rajoet</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+
+          <!-- Dropdown Produk -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="produkDropdown" data-toggle="dropdown">
+              Produk
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#produk">Cardigan</a>
+              <a class="dropdown-item" href="#">Sweater</a>
+              <a class="dropdown-item" href="#">Koleksi Terbaru</a>
+            </div>
+          </li>
+
+          <!-- Dropdown Promo -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="promoDropdown" data-toggle="dropdown">
+              Promo
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">Diskon Spesial</a>
+              <a class="dropdown-item" href="#">Flash Sale</a>
+              <a class="dropdown-item" href="#">Paket Hemat</a>
+            </div>
+          </li>
+
+          <!-- Dropdown Kontak -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="kontakDropdown" data-toggle="dropdown">
+              Kontak
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">WhatsApp</a>
+              <a class="dropdown-item" href="#">Instagram</a>
+              <a class="dropdown-item" href="#">TikTok Shop</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Selamat Datang di Saputra Rajoet</h1>
+      <p class="mb-4">Fashion rajutan stylish dan berkualitas dengan harga bersahabat ✨</p>
+      <a href="#produk" class="btn btn-primary btn-lg">Belanja Sekarang</a>
+    </div>
+  </section>
+
+  <!-- Produk -->
+  <section id="produk" class="py-5">
+    <div class="container">
+      <h2 class="text-center font-weight-bold mb-5 text-light">Produk Terbaru</h2>
+      <div class="row">
+
+        <!-- Produk -->
+        <div class="col-md-3 mb-4">
+          <div class="card product-card">
+            <img src="images/produk1.jpeg" class="card-img-top" alt="Cardigan Belle K3">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cardigan Belle K3</h5>
+              <p class="text-muted mb-1">Rp 47.000</p>
+              <a href="https://vt.tokopedia.com/t/ZSHvhsfF87M9t-KulVs/" class="btn btn-primary btn-sm">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <div class="card product-card">
+            <img src="images/produk2.jpeg" class="card-img-top" alt="Cardigan Belle Panjang">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cardigan Belle Panjang</h5>
+              <p class="text-muted mb-1">Rp 46.000</p>
+              <a href="https://vt.tokopedia.com/t/ZSHvhsDCYaLbe-fZY7r/" class="btn btn-primary btn-sm">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <div class="card product-card">
+            <img src="images/produk3.jpeg" class="card-img-top" alt="Cardigan Breshka">
+            <div class="card-body text-center">
+              <h5 class="card-title">Cardigan Breshka</h5>
+              <p class="text-muted mb-1">Rp 42.000</p>
+              <a href="https://vt.tokopedia.com/t/ZSHvhsUae7K3L-rgymc/" class="btn btn-primary btn-sm">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+          <div class="card product-card">
+            <img src="images/produk4.jpeg" class="card-img-top" alt="Willy Cardy Crop">
+            <div class="card-body text-center">
+              <h5 class="card-title">Willy Cardy Crop</h5>
+              <p class="text-muted mb-1">Rp 35.500</p>
+              <a href="https://vt.tokopedia.com/t/ZSHvhsSjyJGhq-Lf19w/" class="btn btn-primary btn-sm">Beli Sekarang</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <img src="images/logo.png" alt="Logo Footer" width="65">
+    <p class="mt-2">© 2025 Saputra Rajoet | TikTokShop: @SaputraRajoet <br></p>
+  </footer>
+
+  <!-- Script Bootstrap 4 dari CDN -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
